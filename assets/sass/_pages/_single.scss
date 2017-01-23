@@ -1,0 +1,25 @@
+/*	-------------------------------------
+	:: Single Post
+	---------------------------------- */
+
+	/* Post Single or Page
+	---------------------------------- */
+	body.single,
+	body.page {
+		article > header {
+			margin-bottom: 60px;
+		}
+
+		h1,
+		.entry-meta {
+			text-align: center;
+		}
+
+		article.post {
+			margin-bottom: 30px;
+		}
+	}
+
+	.single-footer {
+		margin-top: 60px;
+	}

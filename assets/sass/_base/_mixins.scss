@@ -1,0 +1,47 @@
+/*	-------------------------------------
+	:: Mobile First Mixin
+	---------------------------------- */
+	@mixin min-width($media) {
+		@media (min-width: $media) {
+			@content;
+		}
+	}
+
+
+/*	-------------------------------------
+	:: Desktop First Mixin
+	---------------------------------- */
+	@mixin max-width($media) {
+		@media (max-width: ($media - 1px)) {
+			@content;
+		}
+	}
+
+
+/*	-------------------------------------
+	:: Firefox mixin
+	---------------------------------- */
+	@mixin firefox() {
+		@-moz-document url-prefix() {
+			@content;
+		}
+	}
+
+
+/*	-------------------------------------
+	:: Safari mixin
+	---------------------------------- */
+	@mixin safari() {
+		@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+			@content;
+		}
+	}
+
+/*	-------------------------------------
+	:: Retina mixin
+	---------------------------------- */
+	@mixin retina() {
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+			@content;
+		}
+	}

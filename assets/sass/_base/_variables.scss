@@ -1,0 +1,119 @@
+/*  -----------------------------------
+	:: Variables
+	-------------------------------- */
+
+	/* Consistent Sizing
+	----------------------------------- */
+	$max-width: 1024px;
+
+	/* Fonts
+	----------------------------------- */
+	$primary-font: 'Merriweather', serif;
+	$secondary-font: 'Source Sans Pro', sans-serif;
+
+	// Replace the 'inherit' value with the proper font variables from directly above
+	$body-font: $primary-font;
+	$heading-font: $secondary-font;
+	$button-font: $secondary-font;
+	$nav-font: $secondary-font;
+
+
+	/* Colors
+	----------------------------------- */
+	// Gray
+	$gray: #5d5e5e;
+	$gray-dark: #333333;
+	$gray-light: #cccccc;
+	$body-bg: #f9f9f9;
+
+	// Blue
+	$blue: #2ab5ce;
+	$blue-dark: #01516e;
+
+	// Green
+	$green: #51bb7b;
+	$green-dark: #267048;
+
+	// Yellow
+	$yellow: #f0ce15;
+	$yellow-dark: #9a7700;
+
+	// Orange
+	$orange: #f47820;
+	$orange-dark: #8e4402;
+
+	// Red
+	$red: #ef4e65;
+	$red-dark: #8c2738;
+
+	// Pink
+	$pink: #e0368c;
+	$pink-dark: #851252;
+
+	// Purple
+	$purple: #8351a0;
+	$purple-dark: #4e2760;
+
+
+	/* Theme-wide setting colors (for easy reuse)
+	----------------------------------- */
+	$cta: $blue;
+
+
+	/* Third party Colors
+	----------------------------------- */
+	// Twitter
+	$twitter: #55acee;
+	$twitter-active: #41b7d8;
+
+	// Facebook
+	$facebook: #3b5997;
+	$facebook_active:#263960;
+
+	// Google
+	$google: #d64937;
+	$google_active: #a02f21;
+
+	// LinkedIn
+	$linkedin: #0073b2;
+	$linkedin_active: #004265;
+
+	// Pinterest
+	$pinterest: #cb2027;
+	$pinterest_active: #89161a;
+
+	// GitHub
+	$github: #3a3838;
+	$github_active: #131212;
+
+	// SoundCloud
+	$soundcloud: #f80;
+	$soundcloud_active: #f30;
+
+	// Instagram
+	$instagram: #3f729b;
+	$instagram_active: darken($instagram, 10%);
+
+	// Dribbble
+	$dribbble: #ea4c89;
+	$dribbble_active: darken($dribbble, 10%);
+
+	// Flickr
+	$flickr: #ff0084;
+	$flickr_secondary: #0063dc;
+
+	// Behance
+	$behance: #3a3838;
+	$behance_active: #131212;
+
+	// WordPress
+	$wordpress: #21759b ;
+	$wordpress_active: darken($wordpress, 10%);
+
+	// Youtube
+	$youtube: #e52d27 ;
+	$youtube_active: #b31217 ;
+
+	// Vimeo
+	$vimeo: #1ab7ea;
+	$vimeo_active: darken($vimeo, 10%);

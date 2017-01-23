@@ -1,0 +1,168 @@
+/*	-------------------------------------
+	:: Typography
+	---------------------------------- */
+
+	// Header Tags
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $secondary-font;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 20px;
+		line-height: 1.1;
+		text-rendering: optimizeLegibility;
+
+		a {
+			color: inherit;
+			font: inherit;
+			letter-spacing: inherit;
+
+			&:hover {
+				color: $blue;
+			}
+		}
+
+		// Handle mobile typography appropriately
+		@include max-width(900px) {
+			word-break: break-word;
+			hyphens: auto;
+		}
+	}
+
+	h1 {
+		font-size: 60px;
+		text-align: center;
+	}
+	h2 {
+		font-size: 48px;
+	}
+	h3 {
+		font-size: 36px;
+	}
+	h4 {
+		font-size: 24px;
+	}
+	h5 {
+		font-size: 21px;
+	}
+	h6 {
+		font-size: 18px;
+	}
+
+
+	/* Paragraphs and Spans */
+	p, span, li {
+		font: normal 400 18px/1.6 $body-font;
+		color: $gray-dark;
+		margin-top: 0;
+		font-feature-settings: "liga", "kern";
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+
+
+	/* Helpful Typography Defaults */
+	em, i {
+		font-style: italic;
+		line-height: inherit;
+	}
+
+	strong, b {
+		font-weight: bold;
+		line-height: inherit;
+	}
+
+	sub, sup {
+		font-size: 75%;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+
+	sup { top: -.5em; }
+	sub { bottom: -.25em; }
+
+
+	/* Links */
+	a {
+		position: relative;
+		text-decoration: none;
+		color: $cta;
+		line-height: inherit;
+		transition: color 100ms ease-in-out 0ms;
+
+		&:focus  {
+			color: $cta;
+			outline: none;
+		}
+
+		& > span {
+			color: inherit;
+			font: inherit;
+			text-decoration: inherit;
+			line-height: inherit;
+		}
+
+		img { border: none; }
+	}
+
+
+	/* Images */
+	img {
+		vertical-align: top;
+		max-width: 100%;
+		height: auto;
+	}
+
+	svg:not(:root) { overflow: hidden; }
+
+
+	/* Unsorted/Sorted Lists */
+	ul, ol {
+		margin: 0 0 30px 0;
+		padding: 0 0 0 30px;
+		font-family: inherit;
+
+		&.no-bullets {
+			list-style: none;
+		}
+
+		li {
+			margin-bottom: 15px;
+		}
+
+		p + & {
+			margin-top: -10px;
+		}
+	}
+
+
+	/* Quotes */
+	blockquote {
+		margin: 0 0 30px 0;
+		padding-left: 30px;
+		border-left: 2px solid $gray-dark;
+		transition: all 0.2s ease;
+	}
+		q {
+			quotes: '\201C' '\201D' '\2018' '\2019';
+		}
+
+
+	// Horizontal Rules
+	hr {
+		height: 1px;
+		background: $gray;
+		border: none;
+	}
+
+	time {
+		font-style: italic;
+	}
+
+	code {
+		background: #ededed;
+		padding: 1px 4px 4px;
+		border-radius: 4px;
+	}

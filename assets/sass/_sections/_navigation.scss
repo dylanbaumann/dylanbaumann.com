@@ -1,0 +1,65 @@
+/*	-------------------------------------
+	:: Navigation
+	---------------------------------- */
+	#site-menu {
+		display: flex;
+		flex: 0 0 100%;
+		justify-content: flex-end;
+		align-items: center;
+
+		@include min-width(700px) {
+			flex: 0 0 calc(100% - 300px);
+			max-width: 400px;
+		}
+	}
+
+	.menu-primary-navigation-container {
+		flex: 0 0 100%;
+	}
+
+	#menu-primary-navigation {
+		width: 100%;
+		padding: 0;
+		margin: 0 0 0 -10px; // offset for link padding while keeping vertical alignment of content;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		li {
+			flex: 0 0 calc(50% - 10px);
+			margin-bottom: 10px;
+
+			// Current Page
+			&.current-menu-item,
+			&.current_page_parent,
+			body.post-type-archive-note &.menu-item-129,
+			body.single-note &.menu-item-129,
+			body.post-type-archive-game &.menu-item-127,
+			body.single-game &.menu-item-127 {
+				a {
+					color: $blue;
+				}
+			}
+		}
+
+		a {
+			padding: 8px 10px;
+			color: $gray-dark;
+
+			&:hover {
+				color: $gray;
+			}
+		}
+
+		@include min-width(700px) {
+			margin: 0;
+			justify-content: flex-end;
+
+			li {
+				flex: 0 0 auto;
+				margin-bottom: 0;
+			}
+		}
+	}
