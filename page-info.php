@@ -12,10 +12,17 @@
 
 		<?php /* Blizzard content */ ?>
 		<?php if( get_field('info_blizzard') ): ?>
-			<section id="intro-blizzard">
+			<section id="info-blizzard">
 				<?php the_field('info_blizzard'); ?>
 
-				<div class="warcraft-info">
+				<div class="game-info">
+					<p class="toon-name">
+						<span class="wow-name">Name</span>, <span class="wow-race">Race</span> <span class="wow-class">Class</span><br>
+						Level <span class="wow-level"></span><br>
+						<span class="wow-realm">Realm</span><br>
+						Honorable Kills: <span class="wow-HKills"></span>
+					</p>
+					<div class="wow-thumbnail"></div>
 				</div>
 			</section>
 		<?php endif; ?>
