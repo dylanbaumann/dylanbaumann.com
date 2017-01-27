@@ -8,6 +8,9 @@
 
 <?php wp_footer(); ?>
 
+
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery-3.1.1.min.js"></script>
+
 <?php /* Google Analytics */ ?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,6 +21,12 @@
   ga('create', 'UA-28311173-1', 'auto');
   ga('send', 'pageview');
 </script>
+
+
+
+<?php if(is_page('Info')): ?>
+	<script src="<?php echo get_template_directory_uri() ?>/assets/js/blizzardapi.js"></script>
+<?php endif; ?>
 
 </body>
 </html>
