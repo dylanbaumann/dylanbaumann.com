@@ -29,6 +29,10 @@ function getClasses(classes) {
 	updateHTML();
 }
 
+function getRaces(races) {
+	// TODO: do the same thing as getClasses(), but for Race info
+}
+
 // Update the HTML values
 function updateHTML() {
 	console.log('Step 4: Update the HTML');
