@@ -132,3 +132,8 @@
 			opacity: 1;
 		}
 	}
+
+
+	.wp-caption[style*="width"] {
+		max-width: 100%;
+	}

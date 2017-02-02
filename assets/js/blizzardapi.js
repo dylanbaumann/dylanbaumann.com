@@ -53,6 +53,7 @@ function updateHTML() {
 // Using the response, set some variables
 function fetchResponse(response) {
 	console.log('Step 1: Setting initial variables');
+	console.log(response);
 
 	// Return each of the values I want.
 	wowVars.toon_classID = response.class,
