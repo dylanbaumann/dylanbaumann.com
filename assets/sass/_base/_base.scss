@@ -1,39 +1,46 @@
 /*	-------------------------------------
-	:: Base / General Styling
+	:: Base
 	---------------------------------- */
 	*, *::before, *::after {
 		box-sizing: border-box;
 	}
 
-	html {
-		font-family: $body_font;
-		color: $gray-dark;
+	html, body {
 		background: $body-bg;
 		margin: 0;
 		padding: 0;
-		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-		min-width: 320px; // Anthing below an iPhone 4s I do not support
-		-ms-text-size-adjust: 100%;
-		-webkit-text-size-adjust: 100%;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-
-		&.mac * {
-			text-rendering: optimizeLegibility;
-		}
 	}
 
-	#main {
-		background-color: white;
-		min-height: 100vh;
+	html {
+		min-width: 320px; // Anthing below an iPhone 4s I do not support
+		overflow-y: auto; // Show scrollbar by default
 	}
 
 	body {
-		font: inherit;
+		font-family: $body_font;
+		line-height: 1.7;
+		color: $gray-dark;
 		margin: 0;
 		padding: 0;
 		width: 100%;
 		height: 100%;
+	    font-size: 100%;
+
+		@include min-width(600px) {
+			font-size: 115%;
+		}
+
+		@include min-width(800px) {
+			font-size: 130%;
+		}
+
+		@include min-width(1024px) {
+			font-size: 140%;
+		}
+
+		@include min-width(1200px) {
+			font-size: 145%;
+		}
 	}
 
 	::selection, *::selection {
@@ -44,10 +51,4 @@
 	::-moz-selection, *::-moz-selection {
 		background: $cta;
 		color: white;
-	}
-
-	#wpadminbar {
-		@include max-width(782px) {
-			display: none;
-		}
 	}

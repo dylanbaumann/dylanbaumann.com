@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Load webfonts -->
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i|Source+Sans+Pro:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css" />
 
 	<?php wp_head(); ?>

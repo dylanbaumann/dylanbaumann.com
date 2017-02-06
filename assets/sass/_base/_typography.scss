@@ -4,20 +4,18 @@
 
 	// Header Tags
 	h1, h2, h3, h4, h5, h6 {
-		font-family: $secondary-font;
-		font-weight: 700;
+		font-weight: normal;
+		font-size: 140%;
+	    line-height: 125%;
+	    color: $gray-dark;
 		margin-top: 0;
-		margin-bottom: 20px;
-		line-height: 1.1;
-		text-rendering: optimizeLegibility;
+		margin-bottom: 0.25em;
 
 		a {
 			color: inherit;
-			font: inherit;
-			letter-spacing: inherit;
 
 			&:hover {
-				color: $blue;
+				color: $red;
 			}
 		}
 
@@ -26,39 +24,25 @@
 			word-break: break-word;
 			hyphens: auto;
 		}
+
+		// Increase font-size as browsers increase
+		@include min-width(800px) {
+			font-size: 160%;
+		}
 	}
 
 	h1 {
-		font-size: 60px;
+		font-size: 40px;
 		text-align: center;
-	}
-	h2 {
-		font-size: 48px;
-	}
-	h3 {
-		font-size: 36px;
-	}
-	h4 {
-		font-size: 24px;
-	}
-	h5 {
-		font-size: 21px;
-	}
-	h6 {
-		font-size: 18px;
-	}
 
-
-	/* Paragraphs and Spans */
-	p, span, li {
-		font: normal 400 18px/1.6 $body-font;
-		color: $gray-dark;
-		margin-top: 0;
-		font-feature-settings: "liga", "kern";
+		@include min-width(800px) {
+			font-size: 60px;
+		}
 	}
 
 	p {
-		margin-bottom: 30px;
+		margin: 0 0 2em 0;
+		hyphens: auto;
 	}
 
 
@@ -90,18 +74,11 @@
 		text-decoration: none;
 		color: $cta;
 		line-height: inherit;
-		transition: color 100ms ease-in-out 0ms;
+		transition: color 0.2s ease-in-out 0ms;
 
 		&:focus  {
-			color: $cta;
+			color: rgba(0, 0, 0, 0.4);
 			outline: none;
-		}
-
-		& > span {
-			color: inherit;
-			font: inherit;
-			text-decoration: inherit;
-			line-height: inherit;
 		}
 
 		img { border: none; }
@@ -119,24 +96,22 @@
 
 
 	/* Unsorted/Sorted Lists */
-	ul, ol {
-		margin: 0 0 30px 0;
-		padding: 0 0 0 30px;
-		font-family: inherit;
-
-		&.no-bullets {
-			list-style: none;
-		}
-
-		li {
-			margin-bottom: 15px;
-		}
-
-		p + & {
-			margin-top: -10px;
-		}
+	ol, ul {
+		list-style: none;
+		padding: 0;
 	}
 
+	ul {
+		list-style-type: disc;
+		margin: 0 0 2em;
+		padding-left: 1.125em;
+	}
+
+	ol {
+		margin: 0 0 2em;
+		padding-left: 1.125em;
+		list-style-type: decimal;
+	}
 
 	/* Quotes */
 	blockquote {
@@ -144,6 +119,10 @@
 		padding-left: 30px;
 		border-left: 2px solid $gray-dark;
 		transition: all 0.2s ease;
+		color: rgba(0, 0, 0, 0.5);
+		font-style: italic;
+		margin: 0 auto;
+		letter-spacing: -0.005em;
 	}
 		q {
 			quotes: '\201C' '\201D' '\2018' '\2019';

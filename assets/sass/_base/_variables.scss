@@ -8,22 +8,22 @@
 
 	/* Fonts
 	----------------------------------- */
-	$primary-font: 'Merriweather', serif;
-	$secondary-font: 'Source Sans Pro', sans-serif;
+	$primary-font: 'Libre Baskerville', serif;
 
 	// Replace the 'inherit' value with the proper font variables from directly above
 	$body-font: $primary-font;
-	$heading-font: $secondary-font;
-	$button-font: $secondary-font;
-	$nav-font: $secondary-font;
+	$heading-font: $primary-font;
+	$button-font: $primary-font;
+	$nav-font: $primary-font;
 
 
 	/* Colors
 	----------------------------------- */
 	// Gray
 	$gray: #5d5e5e;
-	$gray-dark: #333333;
+	$gray-dark: #3a3a3a;
 	$gray-light: #cccccc;
+	// $body-bg: #f8f3ef;
 	$body-bg: #f9f9f9;
 
 	// Blue
@@ -43,7 +43,7 @@
 	$orange-dark: #8e4402;
 
 	// Red
-	$red: #ef4e65;
+	$red: #EE4938;
 	$red-dark: #8c2738;
 
 	// Pink
@@ -57,7 +57,7 @@
 
 	/* Theme-wide setting colors (for easy reuse)
 	----------------------------------- */
-	$cta: $blue;
+	$cta: $red;
 
 
 	/* Third party Colors
